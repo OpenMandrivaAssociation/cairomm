@@ -1,9 +1,10 @@
 %define name cairomm
-%define version 1.4.2
+%define version 1.4.4
 %define release %mkrel 1
 %define api 1.0
 %define major       1
 %define libname        %mklibname %name %{api}_%{major}
+%define libnamedev     %mklibname -d %name %{api}
 
 Summary: C++ API for the cairo multi-platform 2D graphics library
 Name: %{name}
@@ -41,15 +42,16 @@ with optional translucence (opacity/alpha) and combined using the
 extended Porter/Duff compositing algebra as found in the X Render
 Extension.
 
-%package -n %{libname}-devel
+%package -n %{libnamedev}
 Summary:	Development files for Cairomm library
 Group:		Development/C++
 Requires:	%{libname} = %version
 Provides:	%{name}-devel = %version-%release
 Provides:	lib%{name}-devel = %version-%release
 Provides:	lib%{name}%api-devel = %version-%release
+Obsoletes:      %mklibname -d %name 1.0_1
 
-%description -n %libname-devel
+%description -n %libnamedev
 This is a C++ API for the Cairo graphics library.
 
 Cairo provides anti-aliased vector-based rendering for X. Paths
@@ -82,7 +84,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS ChangeLog MAINTAINERS NEWS README
 %_libdir/libcairomm-%{api}.so.%{major}*
 
-%files -n %libname-devel
+%files -n %libnamedev
 %defattr(644,root,root,755)
 %doc installed-docs/*
 %_libdir/lib*.so
