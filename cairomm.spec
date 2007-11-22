@@ -1,5 +1,5 @@
 %define name cairomm
-%define version 1.4.4
+%define version 1.4.6
 %define release %mkrel 1
 %define api 1.0
 %define major       1
@@ -10,7 +10,7 @@ Summary: C++ API for the cairo multi-platform 2D graphics library
 Name: %{name}
 Version: %{version}
 Release: %{release}
-Source0: http://cairographics.org/releases/%{name}-%{version}.tar.bz2
+Source0: http://cairographics.org/releases/%{name}-%{version}.tar.gz
 License: LGPL
 Group: System/Libraries
 Url: http://cairographics.org/cairomm
