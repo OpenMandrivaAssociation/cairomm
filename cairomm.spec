@@ -14,6 +14,7 @@ Source0: http://cairographics.org/releases/%{name}-%{version}.tar.gz
 License: LGPL
 Group: System/Libraries
 Url: http://cairographics.org/cairomm
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: cairo-devel
 BuildRequires: doxygen
 
