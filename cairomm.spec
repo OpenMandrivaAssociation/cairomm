@@ -1,5 +1,5 @@
 %define name cairomm
-%define version 1.5.0
+%define version 1.6.0
 %define release %mkrel 1
 %define api 1.0
 %define major       1
@@ -11,9 +11,7 @@ Name: %{name}
 Version: %{version}
 Release: %{release}
 Source0: http://cairographics.org/releases/%{name}-%{version}.tar.gz
-#gw: fix for a small cairo API change
-Patch: cairomm-1.4.6-new-cairo.patch
-License: LGPL
+License: LGPLv2+
 Group: System/Libraries
 Url: http://cairographics.org/cairomm
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
@@ -65,7 +63,6 @@ Extension.
 
 %prep
 %setup -q
-%patch -p1
 
 %build
 %configure2_5x
