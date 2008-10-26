@@ -16,6 +16,7 @@ Group: System/Libraries
 Url: http://cairographics.org/cairomm
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: cairo-devel
+BuildRequires: sigc++2.0-devel
 BuildRequires: doxygen
 
 %description
