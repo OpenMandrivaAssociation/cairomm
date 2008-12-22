@@ -1,6 +1,6 @@
 %define name cairomm
-%define version 1.7.0
-%define release %mkrel 2
+%define version 1.7.2
+%define release %mkrel 1
 %define api 1.0
 %define major       1
 %define libname        %mklibname %name %{api}_%{major}
