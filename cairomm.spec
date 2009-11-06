@@ -1,5 +1,5 @@
 %define name cairomm
-%define version 1.8.2
+%define version 1.8.4
 %define release %mkrel 1
 %define api 1.0
 %define major       1
@@ -70,9 +70,8 @@ Extension.
 %make
 
 %install
-rm -rf $RPM_BUILD_ROOT installed-docs
+rm -rf $RPM_BUILD_ROOT
 %makeinstall_std
-mv %buildroot%_datadir/doc/libcairomm-1.0/* installed-docs
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -91,9 +90,12 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -n %libnamedev
 %defattr(644,root,root,755)
-%doc installed-docs/*
+%doc %_datadir/doc/cairomm-%api
 %_libdir/lib*.so
-%_libdir/lib*.a
 %attr(644,root,root) %_libdir/lib*.la
 %_includedir/*
 %_libdir/pkgconfig/*.pc
+%dir %_libdir/%name-%api/
+%dir %_libdir/%name-%api/include
+%_libdir/%name-%api/include/*.h
+%_datadir/devhelp/books/%name-%api
