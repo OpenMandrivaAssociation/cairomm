@@ -1,5 +1,5 @@
 %define name cairomm
-%define version 1.8.4
+%define version 1.9.1
 %define release %mkrel 1
 %define api 1.0
 %define major       1
