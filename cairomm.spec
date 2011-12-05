@@ -1,7 +1,7 @@
 %define api 1.0
 %define major       1
-%define libname        %mklibname %name %{api}_%{major}
-%define libnamedev     %mklibname -d %name %{api}
+%define libname        %mklibname %{name} %{api}_%{major}
+%define libnamedev     %mklibname -d %{name} %{api}
 
 Summary: C++ API for the cairo multi-platform 2D graphics library
 Name:		cairomm
@@ -73,7 +73,7 @@ find %{buildroot} -name \*.la|xargs rm -f
 %files -n %{libname}
 %{_libdir}/libcairomm-%{api}.so.%{major}*
 
-%files -n %libnamedev}
+%files -n %{libnamedev}
 %doc %{_datadir}/doc/cairomm-%{api}
 %doc AUTHORS ChangeLog MAINTAINERS NEWS README
 %{_libdir}/lib*.so
