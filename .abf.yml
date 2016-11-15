@@ -1,4 +1,2 @@
-removed_sources:
-  cairomm-1.11.2.tar.gz: 35e190a03f760924bece5dc1204cc36b3583c806
 sources:
-  cairomm-1.12.0.tar.xz: 22842e72cf78bf78553979c2da2f34b7eaab6700
+  cairomm-1.12.2.tar.gz: 621546f32221a2ddc079167a13ce5b5409bed704
