@@ -6,13 +6,14 @@
 
 Summary:	C++ API for the cairo multi-platform 2D graphics library
 Name:		cairomm
-Version:	1.12.2
-Release:	4
+Version:	1.16.0
+Release:	1
 License:	LGPLv2+
 Group:		System/Libraries
 Url:		http://cairographics.org/cairomm
 Source0:	http://cairographics.org/releases/%{name}-%{version}.tar.gz
 
+BuildRequires:  meson
 BuildRequires:	doxygen
 BuildRequires:	pkgconfig(cairo)
 BuildRequires:	pkgconfig(sigc++-2.0)
@@ -54,11 +55,11 @@ This is the development package for %{name}.
 %setup -q
 
 %build
-%configure
-%make_build
+%meson
+%meson_build
 
 %install
-%make_install
+%meson_install
 
 %files -n %{libname}
 %{_libdir}/libcairomm-%{api}.so.%{major}*
