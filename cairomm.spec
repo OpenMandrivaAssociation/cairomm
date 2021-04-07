@@ -1,4 +1,4 @@
-%define api 1.0
+%define api 1.16
 %define major 1
 %define libname	%mklibname %{name} %{api} %{major}
 %define devname	%mklibname -d %{name} %{api}
@@ -13,10 +13,11 @@ Group:		System/Libraries
 Url:		http://cairographics.org/cairomm
 Source0:	http://cairographics.org/releases/%{name}-%{version}.tar.gz
 
+BuildRequires:  cmake
 BuildRequires:  meson
 BuildRequires:	doxygen
 BuildRequires:	pkgconfig(cairo)
-BuildRequires:	pkgconfig(sigc++-2.0)
+BuildRequires:	pkgconfig(sigc++-3.0)
 
 %description
 This is a C++ API for the Cairo graphics library.
