@@ -66,7 +66,7 @@ This is the development package for %{name}.
 %{_libdir}/libcairomm-%{api}.so.%{major}*
 
 %files -n %{devname}
-%doc %{_datadir}/doc/cairomm-%{api}
+#doc #{_datadir}/doc/cairomm-%{api}
 %doc AUTHORS MAINTAINERS NEWS README
 %{_includedir}/*
 %{_libdir}/lib*.so
@@ -74,5 +74,5 @@ This is the development package for %{name}.
 %dir %{_libdir}/%{name}-%{api}/
 %dir %{_libdir}/%{name}-%{api}/include/
 %{_libdir}/%{name}-%{api}/include/*.h
-%doc %{_datadir}/devhelp/books/%{name}-%{api}/
+#doc %{_datadir}/devhelp/books/%{name}-%{api}/
 
