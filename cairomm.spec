@@ -67,7 +67,7 @@ This is the development package for %{name}.
 
 %files -n %{devname}
 #doc #{_datadir}/doc/cairomm-%{api}
-%doc AUTHORS MAINTAINERS NEWS README*
+%doc NEWS README*
 %{_includedir}/*
 %{_libdir}/lib*.so
 %{_libdir}/pkgconfig/*.pc
