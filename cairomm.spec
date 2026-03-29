@@ -6,8 +6,8 @@
 
 Summary:	C++ API for the cairo multi-platform 2D graphics library
 Name:		cairomm
-Version:	1.18.0
-Release:	5
+Version:	1.19.0
+Release:	1
 License:	LGPLv2+
 Group:		System/Libraries
 Url:		https://cairographics.org/cairomm
@@ -53,7 +53,7 @@ Provides:	%{name}-devel = %{version}-%{release}
 This is the development package for %{name}.
 
 %prep
-%setup -q
+%autosetup -p1
 
 %build
 %meson
